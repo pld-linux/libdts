@@ -1,3 +1,6 @@
+# NOTE:
+# - it has been renamed to libdca
+# - distribution is temporarily suspended due to DTS Inc. patent clains (see URL)
 Summary:	DTS Coherent Acoustics decoder
 Summary(pl):	Dekoder DTS Coherent Acoustics
 Name:		libdts
@@ -5,9 +8,10 @@ Version:	0.0.2
 Release:	2
 License:	GPL
 Group:		Libraries
-Source0:	http://download.videolan.org/pub/videolan/%{name}/%{version}/%{name}-%{version}.tar.gz
+#Source0:	http://download.videolan.org/pub/videolan/libdts/%{version}/%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	a1c0dac95d7031498c2d19d7a3107469
-URL:		http://www.videolan.org/dtsdec.html
+URL:		http://www.videolan.org/libdca.html
 Patch0:		%{name}-shared.patch
 Patch1:		%{name}-opt.patch
 BuildRequires:	autoconf >= 2.54
