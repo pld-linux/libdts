@@ -65,3 +65,15 @@ diff -urN aa/libdts-0.0.2/src/Makefile.am libdts-0.0.2/src/Makefile.am
  extract_dts_SOURCES = extract_dts.c getopt.c
  
  man_MANS = dtsdec.1 extract_dts.1
+--- libdts-0.0.2/libdts/configure.incl.orig	2004-02-05 10:13:58.000000000 +0100
++++ libdts-0.0.2/libdts/configure.incl	2004-08-24 21:58:48.878518052 +0200
+@@ -1,9 +1,6 @@
+ AC_SUBST([LIBDTS_CFLAGS])
+ AC_SUBST([LIBDTS_LIBS])
+ 
+-dnl avoid -fPIC when possible
+-AC_LIBTOOL_NON_PIC([LIBDTS_CFLAGS="$LIBDTS_CFLAGS -prefer-non-pic"])
+-
+ AC_ARG_ENABLE([fixed],
+     [  --enable-fixed          use fixed-point (integer-based) arithmetic])
+ AC_ARG_ENABLE([double],
