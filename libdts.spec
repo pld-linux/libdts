@@ -1,7 +1,9 @@
 # NOTE:
 # - it has been renamed to libdca
 # - distribution is temporarily suspended due to DTS Inc. patent clains (see URL)
+# Conditional build:
 %bcond_without	static_libs	# don't build static library
+#
 Summary:	DTS Coherent Acoustics decoder
 Summary(pl):	Dekoder DTS Coherent Acoustics
 Name:		libdts
