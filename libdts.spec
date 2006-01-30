@@ -22,6 +22,8 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		specflags	-fno-strict-aliasing
+
 %description
 Free decoder for the DTS Coherent Acoustics format. It consists of a
 library and a command line decoder. DTS is a high quality
