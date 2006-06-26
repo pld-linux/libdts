@@ -8,7 +8,7 @@ Summary:	DTS Coherent Acoustics decoder
 Summary(pl):	Dekoder DTS Coherent Acoustics
 Name:		libdts
 Version:	0.0.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries
 #Source0:	http://download.videolan.org/pub/videolan/libdts/%{version}/%{name}-%{version}.tar.gz
@@ -80,6 +80,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+install libdts/dts_internal.h $RPM_BUILD_ROOT%{_includedir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
