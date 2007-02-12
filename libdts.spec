@@ -5,7 +5,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	DTS Coherent Acoustics decoder
-Summary(pl):	Dekoder DTS Coherent Acoustics
+Summary(pl.UTF-8):   Dekoder DTS Coherent Acoustics
 Name:		libdts
 Version:	0.0.2
 Release:	2
@@ -30,34 +30,34 @@ library and a command line decoder. DTS is a high quality
 multi-channel (5.1) digital audio format used in DVDs and DTS audio
 CDs.
 
-%description -l pl
-Wolny dekoder formatu DTS Coherent Acoustics. Sk≥ada siÍ z biblioteki
-i dekodera dzia≥aj±cego z linii poleceÒ. DTS jest wysokiej jako∂ci
-wielokana≥owym (5.1) cyfrowym formatem audio uøywanym w DVD i DTS
+%description -l pl.UTF-8
+Wolny dekoder formatu DTS Coherent Acoustics. Sk≈Çada siƒô z biblioteki
+i dekodera dzia≈ÇajƒÖcego z linii polece≈Ñ. DTS jest wysokiej jako≈õci
+wielokana≈Çowym (5.1) cyfrowym formatem audio u≈ºywanym w DVD i DTS
 audio CD.
 
 %package devel
 Summary:	Header files for libdts library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki libdts
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki libdts
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for libdts library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki libdts.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki libdts.
 
 %package static
 Summary:	Static libdts library
-Summary(pl):	Statyczna biblioteka libdts
+Summary(pl.UTF-8):   Statyczna biblioteka libdts
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libdts library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libdts.
 
 %prep
