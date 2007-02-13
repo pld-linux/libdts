@@ -5,7 +5,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	DTS Coherent Acoustics decoder
-Summary(pl.UTF-8):   Dekoder DTS Coherent Acoustics
+Summary(pl.UTF-8):	Dekoder DTS Coherent Acoustics
 Name:		libdts
 Version:	0.0.2
 Release:	2
@@ -38,7 +38,7 @@ audio CD.
 
 %package devel
 Summary:	Header files for libdts library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libdts
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libdts
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -50,7 +50,7 @@ Pliki nagłówkowe biblioteki libdts.
 
 %package static
 Summary:	Static libdts library
-Summary(pl.UTF-8):   Statyczna biblioteka libdts
+Summary(pl.UTF-8):	Statyczna biblioteka libdts
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
