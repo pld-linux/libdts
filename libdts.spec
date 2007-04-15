@@ -8,7 +8,7 @@ Summary:	DTS Coherent Acoustics decoder
 Summary(pl.UTF-8):	Dekoder DTS Coherent Acoustics
 Name:		libdts
 Version:	0.0.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries
 #Source0:	http://download.videolan.org/pub/videolan/libdts/%{version}/%{name}-%{version}.tar.gz
