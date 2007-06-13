@@ -1,6 +1,6 @@
 # NOTE:
 # - it has been renamed to libdca
-# - distribution is temporarily suspended due to DTS Inc. patent clains (see URL)
+#
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 #
@@ -11,8 +11,7 @@ Version:	0.0.2
 Release:	3
 License:	GPL
 Group:		Libraries
-#Source0:	http://download.videolan.org/pub/videolan/libdts/%{version}/%{name}-%{version}.tar.gz
-Source0:	%{name}-%{version}.tar.gz
+Source0:	http://download.videolan.org/pub/videolan/libdca/%{version}/libdca-%{version}.tar.gz
 # Source0-md5:	a1c0dac95d7031498c2d19d7a3107469
 URL:		http://www.videolan.org/libdca.html
 Patch0:		%{name}-shared.patch
