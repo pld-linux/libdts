@@ -7,15 +7,14 @@
 Summary:	DTS Coherent Acoustics decoder
 Summary(pl.UTF-8):	Dekoder DTS Coherent Acoustics
 Name:		libdts
-Version:	0.0.2
-Release:	3
+Version:	0.0.5
+Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://download.videolan.org/pub/videolan/libdca/%{version}/libdca-%{version}.tar.gz
-# Source0-md5:	a1c0dac95d7031498c2d19d7a3107469
-URL:		http://www.videolan.org/libdca.html
-Patch0:		%{name}-shared.patch
-Patch1:		%{name}-opt.patch
+Source0:	http://download.videolan.org/pub/videolan/libdca/%{version}/libdca-%{version}.tar.bz2
+# Source0-md5:	dab6b2795c66a82a6fcd4f8343343021
+URL:		http://www.videolan.org/developers/libdca.html
+Patch0:		%{name}-opt.patch
 BuildRequires:	autoconf >= 2.54
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -60,9 +59,8 @@ Static libdts library.
 Statyczna biblioteka libdts.
 
 %prep
-%setup -q
+%setup -q -n libdca-%{version}
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__libtoolize}
@@ -95,7 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc doc/libdts.txt
+%doc doc/libdca.txt
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/*.h
