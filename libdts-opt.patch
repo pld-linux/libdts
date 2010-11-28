@@ -1,6 +1,6 @@
---- libdts-0.0.2/configure.ac.orig	2004-08-24 21:52:52.433773000 +0200
-+++ libdts-0.0.2/configure.ac	2004-08-24 21:57:56.510045071 +0200
-@@ -26,13 +26,6 @@
+--- libdca-0.0.5/configure.ac.orig	2007-04-10 14:28:07.000000000 +0200
++++ libdca-0.0.5/configure.ac	2010-11-28 13:12:23.514670272 +0100
+@@ -27,13 +27,6 @@
      TRY_CFLAGS="$OPT_CFLAGS -Wall"
      AC_TRY_CFLAGS([$TRY_CFLAGS $CFLAGS],[OPT_CFLAGS=$TRY_CFLAGS])
  
@@ -14,7 +14,7 @@
      AC_ARG_ENABLE([debug],
  	[  --enable-debug          debug mode configuration])
      if test x"$enable_debug" = x"yes"; then
-@@ -43,21 +36,6 @@
+@@ -44,21 +37,6 @@
  	AC_TRY_CFLAGS([$TRY_CFLAGS $CFLAGS],[OPT_CFLAGS=$TRY_CFLAGS])
      fi
  
@@ -22,11 +22,11 @@
 -    case "$host" in
 -    i?86-* | k?-*)
 -	case "$host" in
--	i386-*) TRY_CFLAGS="$OPT_CFLAGS -mcpu=i386";;
--	i486-*) TRY_CFLAGS="$OPT_CFLAGS -mcpu=i486";;
--	i586-*) TRY_CFLAGS="$OPT_CFLAGS -mcpu=pentium";;
--	i686-*) TRY_CFLAGS="$OPT_CFLAGS -mcpu=pentiumpro";;
--	k6-*)   TRY_CFLAGS="$OPT_CFLAGS -mcpu=k6";;
+-	i386-*) TRY_CFLAGS="$OPT_CFLAGS -mtune=i386";;
+-	i486-*) TRY_CFLAGS="$OPT_CFLAGS -mtune=i486";;
+-	i586-*) TRY_CFLAGS="$OPT_CFLAGS -mtune=pentium";;
+-	i686-*) TRY_CFLAGS="$OPT_CFLAGS -mtune=pentiumpro";;
+-	k6-*)   TRY_CFLAGS="$OPT_CFLAGS -mtune=k6";;
 -	esac
 -	AC_TRY_CFLAGS([$TRY_CFLAGS $CFLAGS],[OPT_CFLAGS=$TRY_CFLAGS]);;
 -    sparc-* | sparc64-*)
