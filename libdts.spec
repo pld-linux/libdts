@@ -1,4 +1,4 @@
-# TODO: rename spec/package to libdca
+# TODO: rename spec to libdca, swap Name/Provides?
 #
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
@@ -7,7 +7,7 @@ Summary:	DTS Coherent Acoustics streams decoder
 Summary(pl.UTF-8):	Dekoder strumieni DTS Coherent Acoustics
 Name:		libdts
 Version:	0.0.5
-Release:	3
+Release:	4
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://download.videolan.org/pub/videolan/libdca/%{version}/libdca-%{version}.tar.bz2
@@ -18,6 +18,7 @@ BuildRequires:	autoconf >= 2.54
 BuildRequires:	automake >= 1.5
 BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.402
+Provides:	libdca = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		specflags	-fno-strict-aliasing
@@ -39,6 +40,7 @@ Summary:	Header files for libdca library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libdca
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Provides:	libdca-devel = %{version}-%{release}
 
 %description devel
 Header files for libdca library.
@@ -51,12 +53,26 @@ Summary:	Static libdca library
 Summary(pl.UTF-8):	Statyczna biblioteka libdca
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
+Provides:	libdca-static = %{version}-%{release}
 
 %description static
 Static libdca library.
 
 %description static -l pl.UTF-8
 Statyczna biblioteka libdca.
+
+%package tools
+Summary:	DTS Coherent Acoustics streams decoder tools
+Summary(pl.UTF-8):	Narzędzia dekodera strumieni DTS Coherent Acoustics
+Group:		Applications/Sound
+Requires:	%{name} = %{version}-%{release}
+Provides:	libdca-tools = %{version}-%{release}
+
+%description tools
+DTS Coherent Acoustics streams decoder tools.
+
+%description tools -l pl.UTF-8
+Narzędzia dekodera strumieni DTS Coherent Acoustics.
 
 %prep
 %setup -q -n libdca-%{version}
