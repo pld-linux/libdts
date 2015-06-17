@@ -103,16 +103,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
-%attr(755,root,root) %{_bindir}/dcadec
-%attr(755,root,root) %{_bindir}/dtsdec
-%attr(755,root,root) %{_bindir}/extract_dca
-%attr(755,root,root) %{_bindir}/extract_dts
 %attr(755,root,root) %{_libdir}/libdca.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libdca.so.0
-%{_mandir}/man1/dcadec.1*
-%{_mandir}/man1/dtsdec.1*
-%{_mandir}/man1/extract_dca.1*
-%{_mandir}/man1/extract_dts.1*
 
 %files devel
 %defattr(644,root,root,755)
@@ -130,3 +122,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libdca.a
 %{_libdir}/libdts.a
 %endif
+
+%files tools
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/dcadec
+%attr(755,root,root) %{_bindir}/dtsdec
+%attr(755,root,root) %{_bindir}/extract_dca
+%attr(755,root,root) %{_bindir}/extract_dts
+%{_mandir}/man1/dcadec.1*
+%{_mandir}/man1/dtsdec.1*
+%{_mandir}/man1/extract_dca.1*
+%{_mandir}/man1/extract_dts.1*
