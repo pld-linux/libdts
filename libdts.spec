@@ -6,13 +6,14 @@
 Summary:	DTS Coherent Acoustics streams decoder
 Summary(pl.UTF-8):	Dekoder strumieni DTS Coherent Acoustics
 Name:		libdts
-Version:	0.0.6
+Version:	0.0.7
 Release:	1
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://download.videolan.org/pub/videolan/libdca/%{version}/libdca-%{version}.tar.bz2
-# Source0-md5:	eb65623c2b9b4417aada8013760b090a
+# Source0-md5:	68916db60e3017d92841f77908518a11
 Patch0:		%{name}-opt.patch
+Patch1:		%{name}-link.patch
 URL:		http://www.videolan.org/developers/libdca.html
 BuildRequires:	autoconf >= 2.54
 BuildRequires:	automake >= 1.5
@@ -77,6 +78,7 @@ Narzędzia dekodera strumieni DTS Coherent Acoustics.
 %prep
 %setup -q -n libdca-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
@@ -94,6 +96,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libdca.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -110,7 +115,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc doc/libdca.txt
 %attr(755,root,root) %{_libdir}/libdca.so
-%{_libdir}/libdca.la
 %{_includedir}/dca.h
 %{_includedir}/dts.h
 %{_pkgconfigdir}/libdca.pc

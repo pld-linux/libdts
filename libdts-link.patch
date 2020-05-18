@@ -1,0 +1,11 @@
+--- libdca-0.0.7/libdca/Makefile.am.orig	2020-03-26 15:08:37.000000000 +0100
++++ libdca-0.0.7/libdca/Makefile.am	2020-05-18 22:12:27.885718393 +0200
+@@ -12,7 +12,7 @@
+ pkgconfig_DATA = libdca.pc libdts.pc
+ 
+ install-exec-hook:
+-	$(LN_S)f "$(DESTDIR)$(libdir)/libdca.a" "$(DESTDIR)$(libdir)/libdts.a"
++	$(LN_S)f "libdca.a" "$(DESTDIR)$(libdir)/libdts.a"
+ 
+ uninstall-hook:
+ 	unlink "$(DESTDIR)$(libdir)/libdts.a"
